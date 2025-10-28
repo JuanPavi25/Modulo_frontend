@@ -1,0 +1,330 @@
+/* ========== ESTRUCTURA GENERAL ========== */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+}
+
+/* ========== TIPOGRAFÍA Y TEXTOS ========== */
+h1, h2, label, p, button {
+    font-family: 'itim';
+    text-align: center;
+}
+
+h1 {
+    margin: 10px;
+    color: white;
+}
+
+h2 {
+    color: black;
+    font-size: 2.4em;
+}
+
+p {
+    font-size: 1.8em;
+    font-style: italic;
+    margin: 2px;
+    padding-bottom: 2px;
+}
+
+label {
+    font-size: 1.5em;
+    margin: 2px;
+}
+
+
+
+/* ========== ENCABEZADO Y PIE DE PÁGINA ========== */
+header {
+    height: 50px;
+    background-color: rgb(2, 46, 75);
+    padding: 10px;
+    margin: 2px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'itim';
+}
+
+footer {
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    margin: 2px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: 'itim';
+    text-align: center;
+}
+
+/* ========== CONTENEDORES Y CAJAS ========== */
+.boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    background-color: white;
+    margin: 10px;
+}
+
+.box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 39vw;
+    height: 78vh;
+    margin: 10px;
+    padding: 5px 30px;
+    background-color: lightgreen;
+    border: 3px solid black;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 4px gray;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: magia 1s ease-in-out forwards;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    z-index: 1;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    z-index: 10;
+    background-color: lightgray;
+    box-shadow: 0px 0px 30px 6px gray;
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes magia {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes rotacion3d {
+    from {
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+    to {
+        transform: rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+/* ========== DELAY DE ANIMACIÓN POR ID ========== */
+#box1 {
+    animation-delay: 1s;
+}
+
+#box2 {
+    animation-delay: 1.5s;
+}
+
+#box3 {
+    animation-delay: 2s;
+}
+
+/* ========== IMAGEN DE PERFIL ========== */
+#imgperfil {
+    border: 2px solid black;
+    border-radius: 50px;
+    height: 180px;
+    width: 150px;
+    margin: 6px;
+}
+
+/* ========== FORMULARIO ========== */
+#formulario {
+    height: 300px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+form {
+    width: 400px;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+input {
+    height: 5vh;
+    width: 23vw;
+    border: 5px solid black;
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+
+input::placeholder {
+  font-size: 1.4em; /* o usa px, rem, etc. */
+  color: gray;
+  font-style: italic;
+}
+
+
+button {
+    font-size: 20px;
+    height: 45px;
+    width: 200px;
+    margin: 11px;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s ease;
+}
+
+/* ========== ÍCONOS ========== */
+i {
+    display: inline-block;
+    margin: 10px;
+}
+
+#icons {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.9em;
+}
+
+/* ========== RESPONSIVIDAD ========== */
+@media (max-width: 900px) {
+    .boxes {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .box {
+        width: 90%;
+        height: auto;
+    }
+
+    #formulario, form {
+        width: 90%;
+    }
+
+    input {
+        width: 90%;
+    }
+
+    button {
+        width: 80%;
+    }
+}
+
+ /* Estilo del popup */
+    #popup {
+      display: none;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f0f0f0;
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+    #popup button {
+      margin-top: 10px;
+    }
+
+    #html {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f0f0f0;
+      padding: 25px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center;
+    
+      z-index: 1000;
+    }
+    #html button {
+      margin-top: 10px;
+    }
+
+    #html img {
+      width: 256px;
+      height: 256px;
+      margin-bottom: 10px;
+    }
+
+    #css{
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f0f0f0;
+      padding: 25px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center;
+      z-index: 1000;
+    }
+    #css button {
+      margin-top: 10px;
+    }
+
+    #css img {
+      width: 256px;
+      height: 256px;
+      margin-bottom: 10px;
+    }
+
+    #js{
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #f0f0f0;
+      padding: 25px;
+      border: 2px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center;
+      z-index: 1000;
+    }
+    
+    #js button {
+      margin-top: 10px;
+    }
+    
+    #js img {
+      width: 256px;
+      height: 256px;
+      margin-bottom: 10px;
+    }

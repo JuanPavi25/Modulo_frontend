@@ -1,0 +1,214 @@
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+header{
+    height: 50px;
+    font-family: 'itim';
+    text-align: center;
+    background-color: rgb(2, 46, 75);
+    padding: 10px;
+    margin: 2px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    background-color: white;
+    margin: 10px;
+}
+
+.box{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 600px;
+    height: 433px;
+    background-color: white;
+    margin: 10px;
+    padding: 5px 30px 5px 30px;
+    border: 3px black solid;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px 4px gray;
+    background-color: lightgreen;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: magia 1s ease-in-out forwards;
+ /*    animation: rotacion3d 1s ease forwards; */
+    animation-delay: 1s; 
+
+}
+
+.box:hover{
+
+    width: 610px;
+    height: 443px;
+    background-color: lightgray;
+    margin: 20px;
+    padding: 5px;
+    border: 3px black solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 30px 6px gray;
+
+}
+
+
+#imgperfil{
+    border: 2px solid black;
+    border-radius: 50px;
+    height: 180px;
+    width: 150px;    
+    margin: 6px;
+
+}
+
+#box1{
+    animation-delay: 1s;
+}
+
+#box2{
+    animation-delay: 1.5s;
+}
+
+#box3{
+    animation-delay: 2s;
+}
+
+h1{
+    margin: 10px;
+    font-family: 'itim';
+    color: white;
+    text-align: center;
+}
+
+h2{
+    font-family: 'itim';
+    color: black;
+    text-align: center;
+}
+
+.contacto{
+    font-size: 20px;
+}
+
+footer{
+    font-family: 'itim';
+    text-align: center;
+    background-color: lightgoldenrodyellow;
+    padding: 10px;
+    margin: 2px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+i{
+    display: inline-block;
+    margin: 10px;
+}
+
+p{
+  font-family: 'itim';
+  font-size: 20px;
+  font-style: italic; 
+  text-align: center;
+  margin: 2px;
+  padding-bottom: 2px;  
+}
+
+#icons{
+    margin: 5px;
+    padding: 0;;
+}
+#formulario{
+    height: 300px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+form{
+    width: 400px;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+label{
+    font-family: 'itim';
+    font-size: 20px;
+    margin: 2px;
+}
+
+input{
+
+    height: 20px;
+    width: 300px;
+    border: 5px solid black;
+    border-radius: 10px;
+
+}
+ 
+button{
+    font-family: 'itim';
+    font-size: 20px;
+    height: 45px;
+    width: 200px;
+    margin: 11px;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    transition: 0.5s ease;
+}
+@media(max-width:600px){
+
+    .boxes{
+        flex-direction: column;
+    }
+
+}
+@keyframes magia{
+from{
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+to{
+    transform: translateX(0%);
+    opacity: 1;
+}
+}
+
+@keyframes rotacion3d {
+
+    from{
+        transform: rotateY(360deg);
+        opacity: 1;
+    }
+
+    to{
+        transform: rotateY(0deg);
+        opacity:1;
+    }
+}

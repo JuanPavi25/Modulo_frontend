@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tarjeta de Presentación</title>
+    <link rel="stylesheet" href="/styles1.css">
+    <link rel="shortcut icon" href="/img/id-card-solid.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Portafolio</h1>
+    </header>
+    <main>
+        <div class="boxes">
+            <div class="box" id="box1">
+                <div>
+                    <img id="imgperfil" src="/img/perfil.jpg" alt="Foto de Perfil">
+                </div>
+                <div>
+                    <h2>Juan Camilo Pavi Sotomayor</h2>
+                    <hr>
+                    <p>Ubicación: Cali, Valle del Cauca, CO</p>
+                    <p>Desarrollador Web</p>
+                    <p>Estudiante de Desarrollo Web en PONAO</p>
+                </div>
+ 
+            </div>
+
+            <div class="box" id="box2">
+                <div id="contenidobox2">
+                    <div>
+                        <h2>Tecnologías conocidas</h2>
+                        <hr>
+                    </div>
+                    <div>
+                        <h2 id="htmltitle">HTML</h2>
+                        <p>HyperText Markup Language</p>
+                    </div>
+                    <div>
+                        <h2 id="csstitle">CSS</h2>
+                        <p>Cascading Styles Sheet </p>
+                    </div>
+                    <div>
+                        <h2 id="javascripttitle">JavaScript</h2>
+                        <p>Servicio Nacional de Aprendizaje SENA - Tecnólogo en Desarrollo de Software</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="box" id="box3">
+                <div>
+                    <h2> <i class="fa-regular fa-address-book fa-xl"></i> Redes Sociales</h2>
+                    <hr>
+                </div>
+                <div id="icons">
+                    <a href="https://www.linkedin.com/in/JuanPaviS" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color: #000000;"></i></a>
+                    <a href="https://wa.me/+573128083764" target="_blank"><i class="fa-brands fa-square-whatsapp fa-2xl" style="color: #000000"></i></a>
+                    <a href="mailto:juancamilopavi9@gmail.com"><i class="fa-solid fa-envelope fa-2xl" style="color: #000000"></i></a>
+                </div>
+                <div>
+                    <h2 class="contacto">Contacto</h2>
+                    <hr>
+                        <div id="formulario">
+                            <form class="form">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre" required>
+                                <label for="email">Correo electrónico:</label>
+                                <input type="email" name="email" id="email" placeholder="Ingrese su Correo Electrónico" required>
+                                <label for="email">Teléfono:</label>
+                                <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su Numero de Teléfono" required>
+                             
+                                <button id="enviarBtn">Enviar</button>
+                            </form>
+                            
+                        </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="popup">
+            <p>✅ Los datos se enviaron correctamente al servidor.</p>
+            <button onclick="cerrarPopup()">Cerrar</button>
+        </div>
+        <div id="html">
+            <h2>HTML</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Icon">
+            <p><strong>HTML</strong> (HyperText Markup Language) es el lenguaje estándar para crear y estructurar páginas web.</p>
+            <button onclick="cerrarPopup()">Cerrar</button>
+        </div>
+        <div id="css">
+            <h2>CSS</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Icon">
+            <p><strong>CSS</strong> (Cascading Style Sheets) es el lenguaje que se usa para definir el estilo y la presentación de documentos HTML.</p>            
+            <button onclick="cerrarPopup()">Cerrar</button>
+        </div>
+        <div id="js">
+            <h2>JavaScript</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Icon">
+            <p><strong>JavaScript</strong> es un lenguaje de programación que permite crear contenido dinámico e interactivo en páginas web.</p>
+            <button onclick="cerrarPopup()">Cerrar</button>
+        </div>
+
+    </main>
+    <footer>
+        <div>
+            <p>
+                Juan Camilo Pavi Sotomayor - Mi Portafolio &reg;
+            </p>
+        </div>
+    </footer>
+</body>
+<script src="/script.js"></script>
+</html>
