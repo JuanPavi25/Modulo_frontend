@@ -20,11 +20,13 @@ h1, h2, label, p, button {
 h1 {
     margin: 10px;
     color: white;
+    font-size: 2.2em;
 }
 
 h2 {
     color: black;
     font-size: 2.4em;
+    cursor: pointer;
 }
 
 p {
@@ -35,7 +37,7 @@ p {
 }
 
 label {
-    font-size: 1.5em;
+    font-size: 2.2em;
     margin: 2px;
 }
 
@@ -71,7 +73,7 @@ footer {
     align-items: center;
     height: 90%;
     background-color: white;
-    margin: 10px;
+    margin: 2px;
 }
 
 .box {
@@ -84,7 +86,7 @@ footer {
     height: 78vh;
     margin: 10px;
     padding: 5px 30px;
-    background-color: lightgreen;
+    background-color: rgba(174, 252, 174, 0.562);
     border: 3px solid black;
     border-radius: 8px;
     box-shadow: 0px 0px 20px 4px gray;
@@ -225,7 +227,11 @@ i {
     }
 
     #formulario, form {
-        width: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     input {
@@ -235,6 +241,35 @@ i {
     button {
         width: 80%;
     }
+
+    h1 {
+    margin: 10px;
+    color: white;
+    font-size: 2em;
+    }
+
+    h2 {
+    color: black;
+    font-size: 1.6em;
+    cursor: pointer;
+    }
+
+    p {
+    font-size: 1.2em;
+
+    }
+
+    label {
+    font-size: 1.4em;
+    margin: 2px;
+
+    }
+
+    #icons {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.4em;
+}
 }
 
  /* Estilo del popup */
