@@ -39,3 +39,4 @@ function cerrarPopup() {
     js.style.display = 'none';
 }
 
+alert("Haz clic en cada uno de los títulos de las tecnologías conocidas para ver más")
