@@ -1,4 +1,7 @@
 /* ========== ESTRUCTURA GENERAL ========== */
+html{
+    font-size: 16px;
+}
 body {
     margin: 0;
     padding: 0;
@@ -25,19 +28,19 @@ h1 {
 
 h2 {
     color: black;
-    font-size: 2.4em;
+    font-size: 2em;
     cursor: pointer;
 }
 
 p {
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-style: italic;
     margin: 2px;
     padding-bottom: 2px;
 }
 
 label {
-    font-size: 2.2em;
+    font-size: 1.8em;
     margin: 2px;
 }
 
@@ -151,8 +154,8 @@ footer {
 
 /* ========== FORMULARIO ========== */
 #formulario {
-    height: 300px;
-    width: 350px;
+    height: 93%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -160,7 +163,7 @@ footer {
 }
 
 form {
-    width: 400px;
+    width: 100%;
     margin: 0;
     padding: 5px;
     display: flex;
@@ -178,7 +181,7 @@ input {
 }
 
 input::placeholder {
-  font-size: 1.4em; /* o usa px, rem, etc. */
+  font-size: 1em; /* o usa px, rem, etc. */
   color: gray;
   font-style: italic;
 }
@@ -215,15 +218,15 @@ i {
 }
 
 /* ========== RESPONSIVIDAD ========== */
-@media (max-width: 900px) {
+@media (max-width: 1150px) {
     .boxes {
-        flex-direction: column;
-        height: auto;
+        flex-direction: row;
+        height: 80vh;
     }
 
     .box {
-        width: 90%;
-        height: auto;
+        width: 75%;
+        height: 95%;
     }
 
     #formulario, form {
@@ -235,7 +238,63 @@ i {
     }
 
     input {
-        width: 90%;
+        width: 100%;
+    }
+
+    button {
+        width: 80%;
+    }
+
+    h1 {
+    margin: 10px;
+    color: white;
+    font-size: 2em;
+    }
+
+    h2 {
+    color: black;
+    font-size: 1.6em;
+    cursor: pointer;
+    }
+
+    p {
+    font-size: 1.2em;
+
+    }
+
+    label {
+    font-size: 1.4em;
+    margin: 2px;
+
+    }
+
+    #icons {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1.4em;
+    }
+}
+@media (max-width: 900px) {
+    .boxes {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .box {
+        width: 75%;
+        height: 95%;
+    }
+
+    #formulario, form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    input {
+        width: 100%;
     }
 
     button {
@@ -270,6 +329,8 @@ i {
     padding: 10px;
     font-size: 1.4em;
 }
+
+
 }
 
  /* Estilo del popup */
